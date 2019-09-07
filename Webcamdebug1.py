@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 while(True):
      #Capture the damn VideoCapture
@@ -14,6 +14,5 @@ while(True):
      if cv2.waitKey(1) & 0xFF == ord ('q'):
          break
 
-#when everythinbg is done
 cap.release()
 cv2.destroyAllWindows()

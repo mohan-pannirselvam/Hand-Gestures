@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 import math
-cap = cv2.VideoCapture(1)
-     
+cap = cv2.VideoCapture(0)
+
 while(1):
 
     try:  #an error comes if it does not find anything in window as it cannot find contour of max area
@@ -142,9 +142,9 @@ while(1):
     except:
         pass
 
-
-    k = cv2.waitKey(5) & 0xFF
-    if k == 27:
+    if cv2.waitKey(1) & 0xFF == ord ('q'):
+    #k = cv2.waitKey(5) & 0xFF
+    #if k == 27:
         break
 
 cv2.destroyAllWindows()
